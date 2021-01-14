@@ -1,0 +1,70 @@
+{% extends 'content_base.html.twig' %}
+{% block content_body %}
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px;padding-top:50px;padding-bottom: 20px">
+    <a href="{{ path('admin_day_new', {
+                id: month.id
+            }) }}" class="btn btn-primary pull-right">
+                Create Day <span class="fa fa-plus-circle"></span>
+            </a>
+            <h1>Days of {{ month.title }}</h1>
+    </div>
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>&nbsp;</th>
+                <th>Details</th>
+                <th>Show Day</th>
+                <th>Published</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>DELETE DAY</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for day in month.days %}
+                <tr>
+                    <td>{{ day.title }}</td>
+                    <td>
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_edit_day', {
+                            id: day.id,
+                        }) }}">
+                            <span class="fa fa-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ path('day_show', {
+                            slug: day.slug
+                        }) }}">
+                            <span class="fa fa-file-o"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="fa fa-{{ day.isPublished ? 'check' : 'times' }}"></span>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_delete_day', {
+                            id: day.id
+                        }) }}">
+                            <span class="fa fa-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

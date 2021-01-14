@@ -1,0 +1,11 @@
+{{ form_start(monthForm) }}
+    {{ form_row(monthForm.title) }}
+    {{ form_row(monthForm.imageFile, {
+        attr: {
+            'placeholder': 'Select month image'
+        }
+    }) }}
+    {{ form_row(monthForm.content) }}
+    {{ form_row(monthForm.PublishedAt) }}
+    <button type="submit" class="btn btn-primary"> {{ button_text }}</button>
+{{ form_end(monthForm) }}

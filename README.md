@@ -1,0 +1,74 @@
+# Simple Calendar
+
+This repository holds the code and script for Simple Calendar. Simple Calendar is a file-server system built with PHP version 7.4. Simple Calendar uses S-3 an Amazon service know as "Simple Storage Service".
+S-3 allows admin users to upload and download different types of files (PDF,Exe,dox,etc). Simple Calendar gives admin users the access to publish files and daily notes for their registered viewers for the entire calendar year. The Simple Calendar
+website is protected by Symfony's 5 firewall bundle. The firewall bundle ensures that users are authenticated and have the correct authorization for specific pages and only allowing admin users to make special request to the server like uploading new file to the S-3 server. Simple Calendar is easy to setup since, it uses 
+a mysql database to store users information. 
+
+## Setup
+
+To get it working, follow these steps:
+
+**Download Composer dependencies**
+Technical Requirements¶
+Before setting up application you must:
+
+Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer; 
+Install Composer: 
+
+## link: https://getcomposer.org/download/
+which is used to install PHP packages.
+Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally.
+
+## link: https://symfony.com/download
+
+Make sure you have [Composer installed](https://getcomposer.org/download/)
+and then run:
+
+```
+composer install
+```
+
+You may alternatively need to run `php composer.phar install`, depending
+on how you installed Composer.
+
+**Configure the the .env File**
+
+First, make sure you have an `.env` file (you should).
+If you don't, copy `.env.dist` to create it.
+
+Next, look at the configuration and make any adjustments you
+need - specifically `DATABASE_URL`.
+
+**Setup the Database**
+
+Again, make sure `.env` is setup for your computer. Then, create
+the database & tables!
+
+```
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+```
+
+If you get an error that the database exists, that should
+be ok. But if you have problems, completely drop the
+database (`doctrine:database:drop --force`) and try again.
+
+**Start the built-in web server**
+
+You can use Nginx or Apache, but the built-in web server works
+great:
+
+```
+php bin/console server:run
+```
+
+Now check out the site at `http://localhost:8000`
+
+Contact information for Devs: 
+
+** Mauro Vargas, Github: mauro1477, Linkedin: https://www.linkedin.com/in/mauro-vargas-jr-889559167/**
+
+** Laura Ballantyne, Github: lauraballant Linkedin: https://www.linkedin.com/in/laura-ballantyne-24b066182/**
+

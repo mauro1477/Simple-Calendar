@@ -1,0 +1,44 @@
+{% extends 'content_base.html.twig' %}
+{% block content_body %}
+    <div class="container" style="background:#F0F0F0;padding-right:40px;padding-left:40px;padding-top:50px">
+        <h1>Edit Day</h1>
+            <hr>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Details</h3>
+                    {{ include('calendar_admin/day/_form_day.html.twig', {
+                        button_text: 'Update!'
+                    }) }}
+                </div>
+                <div class="col-sm-4">
+                    <h3>Files</h3>
+                    <ul class="list-group small">
+                        <ul class="list-group small js-reference-list" data-url="{{ path('admin_day_list_references', {id: day.id}) }}"></ul>
+                    </ul>
+                    <form action="{{ path('admin_category_add_files', {
+                        id: day.id
+                    }) }}"  method="POST" enctype="multipart/form-data" class="dropzone js-reference-dropzone" >
+                    </form>
+                </div>
+            </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('admin_calendar_form') }}
+    {{ encore_entry_link_tags('file_input_css') }}
+{#    {% if app.environment != 'test' %}{{ encore_entry_link_tags('admin_calendar_form') }}{% endif %}#}
+{#    {% if app.environment != 'test' %}{{ encore_entry_link_tags('file_input_css') }}{% endif %}#}
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('admin_calendar_form') }}
+    {{ encore_entry_script_tags('file_input_js') }}
+{#    {% if app.environment != 'test' %}{{ encore_entry_script_tags('admin_calendar_form') }}{% endif %}#}
+{#    {% if app.environment != 'test' %}{{ encore_entry_script_tags('file_input_js') }}{% endif %}#}
+{% endblock %}

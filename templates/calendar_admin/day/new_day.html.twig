@@ -1,0 +1,9 @@
+{% extends 'content_base.html.twig' %}
+{% block content_body %}
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px;padding-top:50px;">
+        <h1>Create a new day!</h1>
+            {{ include('calendar_admin/day/_form_day.html.twig', {
+                button_text: 'Create Day!'
+            }) }}
+    </div>
+{% endblock %}
