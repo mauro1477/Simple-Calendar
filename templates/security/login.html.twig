@@ -31,4 +31,33 @@
             Sign in
         </button>
     </form>
+    <form class="form-signin" method="post">
+        {% if error %}
+            <div class="alert alert-danger"> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        <input type="hidden" name="email" value="spacebar0@example.com">
+        <input type="hidden" name="password" value = "engage">
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+        <button class="btn btn-lg btn-success btn-block" type="submit">
+            Guest User Sign in
+        </button>
+    </form>
+
+    <form class="form-signin" method="post">
+        {% if error %}
+            <div class="alert alert-danger"> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        <input type="hidden" name="email" value="admin0@thespacebar.com">
+        <input type="hidden" name="password" value = "engage">
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+        <button class="btn btn-lg btn-success btn-block" type="submit">
+            Guest Admin Sign in
+        </button>
+    </form>
 {% endblock %}
