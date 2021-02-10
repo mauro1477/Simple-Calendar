@@ -50,12 +50,12 @@ class DayFormType extends AbstractType
             ]);
         }
 
-//         $builder
-//             ->add('imageFile', FileType::class, [
-//                 'mapped' => false,
-//                 'required' => false,
-// //                'constraints' => $imageConstraints
-//             ]);
+        $builder
+            ->add('imageFile', FileType::class, [
+                'mapped' => false,
+                'required' => false,
+//                'constraints' => $imageConstraints
+            ]);
 
         $builder
             ->add('PublishedAt', ChoiceType::class, [
