@@ -109,6 +109,14 @@ EOF
             $day6->setPublishedAt(true);
             $manager->persist($day6);
 
+            $day7 = new Day();
+            $day7->setTitle('Day 7');
+            $day7->setSlug($this->faker->slug);
+            $day7->setContent('Content for Day 7');
+            $day7->setMonth($month);
+            $day7->setPublishedAt(true);
+            $manager->persist($day6);
+
         });
 
         $manager->flush();

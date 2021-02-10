@@ -6,7 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "antishov/doctrine-extensions-bundle": "^1.4",
-        "aws/aws-sdk-php": "^3.158",
+        "aws/aws-sdk-php": "^3.173",
         "composer/package-versions-deprecated": "1.10.99.1",
         "doctrine/annotations": "^1.10",
         "doctrine/doctrine-bundle": "^2.1",

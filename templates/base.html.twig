@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Simple Calendar{% endblock %}</title>
+        <title>{% block title %}SimpleCalendar{% endblock %}</title>
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -10,7 +10,7 @@
 
         {% endblock %}
         <nav class="navbar navbar-expand-lg navbar-dark navbar-bg {{ app.session.flashbag.peek('success')|length > 0 ? '' : 'mb-5' }}">
-            {% if is_granted('ROLE_USER') %} <a style="margin-left: 75px;" class="navbar-brand space-brand" href="{{ path('app_homepage') }}">Simple Calendar</a> {% endif %}
+            {% if is_granted('ROLE_USER') %} <a style="margin-left: 75px;" class="navbar-brand space-brand" href="{{ path('app_homepage') }}">SimpleCalendar</a> {% endif %}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
