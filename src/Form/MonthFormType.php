@@ -35,24 +35,24 @@ class MonthFormType extends AbstractType
                 'label' => 'Daily Notes',
             ]);
 
-        $imageConstraints = [
-            new Image([
-                'maxSize' => '5M',
-            ])
-        ];
-
-        if (!$isEdit || !$month->getImageFilename()) {
-            $imageConstraints[] = new NotNull([
-                'message' => 'Please upload a file',
-            ]);
-        }
-
-        $builder
-            ->add('imageFile', FileType::class, [
-                'mapped' => false,
-                'required' => false,
-                'constraints' => $imageConstraints
-            ]);
+        // $imageConstraints = [
+        //     new Image([
+        //         'maxSize' => '5M',
+        //     ])
+        // ];
+        //
+        // if (!$isEdit || !$month->getImageFilename()) {
+        //     $imageConstraints[] = new NotNull([
+        //         'message' => 'Please upload a file',
+        //     ]);
+        // }
+        //
+        // $builder
+        //     ->add('imageFile', FileType::class, [
+        //         'mapped' => false,
+        //         'required' => false,
+        //         'constraints' => $imageConstraints
+        //     ]);
 
         $builder
             ->add('PublishedAt', ChoiceType::class, [

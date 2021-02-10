@@ -30,13 +30,13 @@ class MonthAdminController extends AbstractController
           /** @var Month $month*/
           $month = $form->getData();
 
-           /** @var UploadedFile $uploadedFile */
-           $uploadedFile = $form['imageFile']->getData();
-
-           if($uploadedFile){
-             $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $month->getImageFilename());
-             $month->setImageFilename($newFilename);
-           }
+           // /** @var UploadedFile $uploadedFile */
+           // $uploadedFile = $form['imageFile']->getData();
+           //
+           // if($uploadedFile){
+           //   $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $month->getImageFilename());
+           //   $month->setImageFilename($newFilename);
+           // }
 
           $title = $month->getTitle();
           $month = $month->setSlug($title);
