@@ -1,10 +1,5 @@
 {{ form_start(dayForm) }}
     {{ form_row(dayForm.title) }}
-    {{ form_row(dayForm.imageFile, {
-        attr: {
-            'placeholder': 'Select day image'
-        }
-    }) }}
     {{ form_row(dayForm.content) }}
     {{ form_row(dayForm.PublishedAt) }}
     <button type="submit" class="btn btn-primary"> {{ button_text }}</button>
