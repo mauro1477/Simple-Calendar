@@ -26,6 +26,7 @@ security:
 
             logout:
                 path: app_logout #route when logout button is pushed
+                target: https://simplecalendarmaker.com
 
             remember_me:
                 secret:   '%kernel.secret%'

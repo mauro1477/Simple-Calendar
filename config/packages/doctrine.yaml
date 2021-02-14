@@ -4,7 +4,7 @@ parameters:
     database_name: pwmz4chyko7sdtkn
     database_user: aycd0yap0n6e8dgc
     database_password: ljldagh4x9h7xxa0
-    
+
 doctrine:
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
