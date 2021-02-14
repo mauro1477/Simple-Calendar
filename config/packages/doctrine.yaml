@@ -1,11 +1,10 @@
 doctrine:
-    db:
-        image: mysql
-        ports:
-            - "3306:3306"
-        environment:
-            MYSQL_ALLOW_EMPTY_PASSWORD: 1
-            MYSQL_DATABASE: symfony
+    parameters:
+        database_host: qz8si2yulh3i7gl3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+        database_port: 3306
+        database_name: pwmz4chyko7sdtkn
+        database_user: aycd0yap0n6e8dgc
+        database_password: ljldagh4x9h7xxa0
 
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
