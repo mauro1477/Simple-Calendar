@@ -104,9 +104,9 @@ class ReferenceShow
         const itemsHtml = this.references.map(reference => {
             return `
 <li class="list-group-item d-flex justify-content-between align-items-center" data-id="${reference.id}">
-    <label style="font-size: 14px;"> ${reference.originalFilename}</label> 
+    <label style="font-size: 14px;"> ${reference.originalFilename}</label>
     <span>
-        <a href="/admin/calendar/references/${reference.id}/download" target="_blank" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: top;"></span></a>
+        <a href="/admin/calendar/references/${reference.id}/download" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: top;"></span></a>
     </span>
 </li>
 `
