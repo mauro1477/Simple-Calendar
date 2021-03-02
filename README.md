@@ -6,7 +6,7 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
 
-### Prequisites <br>
+### Prequisites <br />
 
 1. Git
 2. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer 
@@ -16,7 +16,7 @@ Used to install PHP packages. Optionally, you can also install Symfony CLI. This
 5. Yarn [install](https://classic.yarnpkg.com/en/docs/install/)
 6. A clone of `Simple-Calendar` repo
 
-### Installation
+### Installation <br />
 1. Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
@@ -35,7 +35,7 @@ on how you installed Composer.
   Next, look at the configuration and make any adjustments you
   need - specifically `DATABASE_URL`.
 
-3. Ensure environment is set to dev
+3. Set `APP_ENV=dev` <br />
 3. **Setup the Database** <br />
 
 Again, make sure `.env` is setup for your computer. Then, create
