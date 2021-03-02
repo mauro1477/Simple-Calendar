@@ -5,8 +5,6 @@ This repository holds the complete code and script for SimpleCalendar. SimpleCal
 SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
-
-**Download Composer and Symfony** <br />
 Before setting up application you must: <br />
 
 Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer <br />
