@@ -12,11 +12,11 @@ Before setting up application you must:
 Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer; 
 Install Composer: 
 
-## link: https://getcomposer.org/download/ <br />
+Composer download: https://getcomposer.org/download/ <br />
 which is used to install PHP packages.
 Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally.
 
-## link: https://symfony.com/download <br />
+Symfony download: https://symfony.com/download <br />
 
 Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
