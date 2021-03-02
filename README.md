@@ -6,11 +6,7 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
 
-To get it working, follow these steps:
-
 **Download Composer dependencies** <br />
-Technical Requirements 
-
 Before setting up application you must:
 
 Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer; 
