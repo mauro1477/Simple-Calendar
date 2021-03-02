@@ -10,7 +10,7 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 1. Git
 2. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer 
-3. Symfony [install](https://symfony.com/download) . Used to install PHP packages. Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. 
+3. Symfony [install](https://symfony.com/download) .  Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. 
 4. Node [install](https://nodejs.org/en/download/current/)
 5. Yarn [install](https://classic.yarnpkg.com/en/docs/install/)
 6. A clone of `Simple-Calendar` repo
