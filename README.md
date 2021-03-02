@@ -1,6 +1,8 @@
 # SimpleCalendar
 
-This repository holds the code and script for SimpleCalendar. SimpleCalendar is a file-server system built with PHP version 7.4. SimpleCalendar uses S-3 an Amazon service known as "Simple Storage Service". SimpleCalendar allows administrators to upload and delete multiple files (PDF,Exe,dox,etc) using Dropzone (AJAX) and S-3. SimpleCalendar permits administrators to publish files and daily notes for their registered users to view daily notes and download files in the calendar. SimpleCalendar is protected by Symfony 5's firewall bundle to authenticate users. SimpleCalendar uses role-based access control (RBAC) authorization allowing users to have access to specific HTML pages. SimpleCalendar uses MySQL database to store email and password of user accounts. 
+This repository holds the complete code and script for SimpleCalendar. SimpleCalendar is a file-server system built with PHP version 7.4. SimpleCalendar uses S-3 an Amazon service known as "Simple Storage Service". SimpleCalendar allows administrators to upload and delete multiple files (PDF,Exe,dox,etc) using Dropzone (AJAX) and S-3. SimpleCalendar permits administrators to publish files and daily notes for their registered users to view daily notes and download files in the calendar. SimpleCalendar is protected by Symfony 5's firewall bundle to authenticate users. SimpleCalendar uses role-based access control (RBAC) authorization allowing users to have access to specific HTML pages. SimpleCalendar uses MySQL database to store email and password of user accounts. 
+
+SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
 
