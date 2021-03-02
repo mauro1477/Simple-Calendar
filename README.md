@@ -6,17 +6,15 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
 
-**Download Composer dependencies** <br />
-Before setting up application you must:
+**Download Composer and Symfony** <br />
+Before setting up application you must: <br />
 
-Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer; 
-Install Composer: 
+Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer <br />
 
-Composer download: https://getcomposer.org/download/ <br />
-Used to install PHP packages. <br />
-Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally.
+Composer install: https://getcomposer.org/download/ <br />
+Used to install PHP packages.Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. <br /><br />
 
-Symfony download: https://symfony.com/download <br />
+Symfony install : https://symfony.com/download <br />
 
 Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
