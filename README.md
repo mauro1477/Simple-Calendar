@@ -62,7 +62,7 @@ symfony serve
 
 Now check out the site at `http://localhost:8000` 
 
-**Contact information for Devs:**
+###Contact information for Devs
 
 **Mauro Vargas** <br />
 **Github:** mauro1477 <br />
