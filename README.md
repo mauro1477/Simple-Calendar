@@ -13,7 +13,7 @@ Install PHP 7.2.5 or higher and these PHP extensions (which are installed and en
 Install Composer: 
 
 Composer download: https://getcomposer.org/download/ <br />
-which is used to install PHP packages.
+Used to install PHP packages. <br />
 Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally.
 
 Symfony download: https://symfony.com/download <br />
