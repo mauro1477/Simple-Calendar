@@ -7,8 +7,10 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 ## Setup
 Before setting up application you must: <br />
 
-1. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer 
-2. Symfony install : https://symfony.com/download <br />
+1. Git
+2. A clone 
+3. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer 
+4. Symfony [install](https://symfony.com/download) <br />
 Used to install PHP packages. Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. 
 3. Node [install](https://nodejs.org/en/download/current/)
 4. Yarn [install](https://classic.yarnpkg.com/en/docs/install/)
@@ -22,7 +24,7 @@ composer install
 You may alternatively need to run `php composer.phar install`, depending
 on how you installed Composer.
 
-**Configure the the .env File** <br />
+6. **Configure the the .env File** <br />
 
 First, make sure you have an `.env` file (you should).
 If you don't, copy `.env.dist` to create it.
