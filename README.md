@@ -5,6 +5,8 @@ This repository holds the complete code and script for SimpleCalendar. SimpleCal
 SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
+
+#Prequisites
 Before setting up application you must: <br />
 
 1. Git
