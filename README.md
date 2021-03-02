@@ -10,14 +10,13 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 1. Git
 2. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer 
-3. Symfony [install](https://symfony.com/download) <br />
-Used to install PHP packages. Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. 
+3. Symfony [install](https://symfony.com/download) . Used to install PHP packages. Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. 
 4. Node [install](https://nodejs.org/en/download/current/)
 5. Yarn [install](https://classic.yarnpkg.com/en/docs/install/)
 6. A clone of `Simple-Calendar` repo
 
 ### Installation <br />
-1. `cd Simple-Calendar` to go into project root <br />
+1. `cd Simple-Calendar` to go into project root 
 2. Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
@@ -26,20 +25,18 @@ composer install
 ```
 
 You may alternatively need to run `php composer.phar install`, depending
-on how you installed Composer. <br />
+on how you installed Composer. 
 
-3. Run `npm install` and `yarn` <br/>
-
-4. **Configure the .env File** <br />
+3. Run `npm install` and `yarn` 
+4. Set `APP_ENV=dev` 
+5. **Configure the .env File** 
 
   First, make sure you have an `.env` file (you should).
   If you don't, copy `.env.dist` to create it.
 
   Next, look at the configuration and make any adjustments you
-  need - specifically `DATABASE_URL`. <br />
-
-5. Set `APP_ENV=dev` <br />
-6. **Setup the Database** <br />
+  need - specifically `DATABASE_URL`. 
+6. **Setup the Database** 
 
 Again, make sure `.env` is setup for your computer. Then, create
 the database & tables!
@@ -52,7 +49,7 @@ php bin/console doctrine:fixtures:load
 
 If you get an error that the database exists, that should
 be ok. But if you have problems, completely drop the
-database (`doctrine:database:drop --force`) and try again. <br />
+database (`doctrine:database:drop --force`) and try again. 
 
 ### Start the built-in web server <br />
 
@@ -63,13 +60,13 @@ great:
 symfony serve
 ```
 
-Now check out the site at `http://localhost:8000` <br />
+Now check out the site at `http://localhost:8000` 
 
 **Contact information for Devs:**
 
 **Mauro Vargas** <br />
 **Github:** mauro1477 <br />
-**Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/ <br /> <br />
+**Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/ 
 
 **Laura Ballantyne** <br />
 Github: lauraballant <br />
