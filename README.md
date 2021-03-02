@@ -8,19 +8,19 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 To get it working, follow these steps:
 
-**Download Composer dependencies**
-Technical Requirements <br />
+**Download Composer dependencies** <br />
+Technical Requirements 
 
 Before setting up application you must:
 
 Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer; 
 Install Composer: 
 
-## link: https://getcomposer.org/download/
+## link: https://getcomposer.org/download/ <br />
 which is used to install PHP packages.
 Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally.
 
-## link: https://symfony.com/download
+## link: https://symfony.com/download <br />
 
 Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
@@ -32,7 +32,7 @@ composer install
 You may alternatively need to run `php composer.phar install`, depending
 on how you installed Composer.
 
-**Configure the the .env File**
+**Configure the the .env File** <br />
 
 First, make sure you have an `.env` file (you should).
 If you don't, copy `.env.dist` to create it.
@@ -40,7 +40,7 @@ If you don't, copy `.env.dist` to create it.
 Next, look at the configuration and make any adjustments you
 need - specifically `DATABASE_URL`.
 
-**Setup the Database**
+**Setup the Database** <br />
 
 Again, make sure `.env` is setup for your computer. Then, create
 the database & tables!
@@ -55,7 +55,7 @@ If you get an error that the database exists, that should
 be ok. But if you have problems, completely drop the
 database (`doctrine:database:drop --force`) and try again.
 
-**Start the built-in web server**
+**Start the built-in web server** <br />
 
 You can use Nginx or Apache, but the built-in web server works
 great:
