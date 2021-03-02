@@ -26,17 +26,17 @@ composer install
 ```
 
 You may alternatively need to run `php composer.phar install`, depending
-on how you installed Composer.
+on how you installed Composer. <br />
 
 3. Run `npm install` and `yarn` <br/>
 
-4. **Configure the the .env File** <br />
+4. **Configure the .env File** <br />
 
   First, make sure you have an `.env` file (you should).
   If you don't, copy `.env.dist` to create it.
 
   Next, look at the configuration and make any adjustments you
-  need - specifically `DATABASE_URL`.
+  need - specifically `DATABASE_URL`. <br />
 
 5. Set `APP_ENV=dev` <br />
 6. **Setup the Database** <br />
@@ -52,9 +52,9 @@ php bin/console doctrine:fixtures:load
 
 If you get an error that the database exists, that should
 be ok. But if you have problems, completely drop the
-database (`doctrine:database:drop --force`) and try again.
+database (`doctrine:database:drop --force`) and try again. <br />
 
-### Start the built-in web server** <br />
+### Start the built-in web server <br />
 
 You can use Nginx or Apache, but the built-in web server works
 great:
@@ -63,11 +63,11 @@ great:
 symfony serve
 ```
 
-Now check out the site at `http://localhost:8000`
+Now check out the site at `http://localhost:8000` <br />
 
-Contact information for Devs: 
+**Contact information for Devs:**
 
-** Mauro Vargas **Github:** mauro1477 **Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/**
+Mauro Vargas **Github:** mauro1477 **Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/
 
-** Laura Ballantyne **Github:** lauraballant **Linkedin:** https://www.linkedin.com/in/laura-ballantyne-24b066182/**
+Laura Ballantyne **Github:** lauraballant **Linkedin:** https://www.linkedin.com/in/laura-ballantyne-24b066182/
 
