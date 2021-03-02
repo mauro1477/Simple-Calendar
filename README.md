@@ -67,7 +67,11 @@ Now check out the site at `http://localhost:8000` <br />
 
 **Contact information for Devs:**
 
-Mauro Vargas **Github:** mauro1477 **Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/
+**Mauro Vargas** <br />
+**Github:** mauro1477 <br />
+**Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/ <br /> <br />
 
-Laura Ballantyne **Github:** lauraballant **Linkedin:** https://www.linkedin.com/in/laura-ballantyne-24b066182/
+**Laura Ballantyne** <br />
+Github: lauraballant <br />
+Linkedin: https://www.linkedin.com/in/laura-ballantyne-24b066182/
 
