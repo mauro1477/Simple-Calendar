@@ -6,7 +6,7 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 
 ## Setup
 
-###Prequisites
+### Prequisites
 Before setting up application you must: <br />
 
 1. Git
@@ -17,7 +17,7 @@ Used to install PHP packages. Optionally, you can also install Symfony CLI. This
 5. Yarn [install](https://classic.yarnpkg.com/en/docs/install/)
 6. A clone of `Simple-Calendar` repo
 
-###Installation
+### Installation
 1. Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
@@ -30,13 +30,14 @@ on how you installed Composer.
 
 2. **Configure the the .env File** <br />
 
-First, make sure you have an `.env` file (you should).
-If you don't, copy `.env.dist` to create it.
+  First, make sure you have an `.env` file (you should).
+  If you don't, copy `.env.dist` to create it.
 
-Next, look at the configuration and make any adjustments you
-need - specifically `DATABASE_URL`.
+  Next, look at the configuration and make any adjustments you
+  need - specifically `DATABASE_URL`.
 
-**Setup the Database** <br />
+3. Ensure environment is set to dev
+3. **Setup the Database** <br />
 
 Again, make sure `.env` is setup for your computer. Then, create
 the database & tables!
