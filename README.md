@@ -7,7 +7,8 @@ SimpleCalendar Web Application: https://simplecalendarmaker.com
 ## Setup
 Before setting up application you must: <br />
 
-Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer <br />
+1. Install PHP 7.2.5 or higher and these PHP extensions (which are installed and enabled by default in most PHP 7 installations): Ctype, iconv, JSON, PCRE, Session, SimpleXML, and Tokenizer <br />
+2. 
 
 Symfony install : https://symfony.com/download <br />
 Used to install PHP packages. Optionally, you can also install Symfony CLI. This creates a binary called symfony that provides all the tools you need to develop and run your Symfony application locally. <br />
