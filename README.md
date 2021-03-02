@@ -17,7 +17,8 @@ Used to install PHP packages. Optionally, you can also install Symfony CLI. This
 6. A clone of `Simple-Calendar` repo
 
 ### Installation <br />
-1. Make sure you have [Composer installed](https://getcomposer.org/download/)
+1. `cd Simple-Calendar` to go into project root <br />
+2. Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
 ```
@@ -27,7 +28,9 @@ composer install
 You may alternatively need to run `php composer.phar install`, depending
 on how you installed Composer.
 
-2. **Configure the the .env File** <br />
+3. Run `npm install` and `yarn` <br/>
+
+4. **Configure the the .env File** <br />
 
   First, make sure you have an `.env` file (you should).
   If you don't, copy `.env.dist` to create it.
@@ -35,8 +38,8 @@ on how you installed Composer.
   Next, look at the configuration and make any adjustments you
   need - specifically `DATABASE_URL`.
 
-3. Set `APP_ENV=dev` <br />
-3. **Setup the Database** <br />
+5. Set `APP_ENV=dev` <br />
+6. **Setup the Database** <br />
 
 Again, make sure `.env` is setup for your computer. Then, create
 the database & tables!
@@ -51,20 +54,20 @@ If you get an error that the database exists, that should
 be ok. But if you have problems, completely drop the
 database (`doctrine:database:drop --force`) and try again.
 
-**Start the built-in web server** <br />
+### Start the built-in web server** <br />
 
 You can use Nginx or Apache, but the built-in web server works
 great:
 
 ```
-php bin/console server:run
+symfony serve
 ```
 
 Now check out the site at `http://localhost:8000`
 
 Contact information for Devs: 
 
-** Mauro Vargas, Github: mauro1477, Linkedin: https://www.linkedin.com/in/mauro-vargas-jr-889559167/**
+** Mauro Vargas **Github:** mauro1477 **Linkedin:** https://www.linkedin.com/in/mauro-vargas-jr-889559167/**
 
-** Laura Ballantyne, Github: lauraballant Linkedin: https://www.linkedin.com/in/laura-ballantyne-24b066182/**
+** Laura Ballantyne **Github:** lauraballant **Linkedin:** https://www.linkedin.com/in/laura-ballantyne-24b066182/**
 
