@@ -27,7 +27,7 @@ class UserFixture extends BaseFixture
         $manager->persist($apiToken2);
         $user->setEmail(sprintf('spacebar%d@example.com', $i));
         $user->agreedTerms();
-        // $user->setFirstName($this->faker->firstName);
+        $user->setFirstName($this->faker->firstName);
         $user->setPassword($this->passwordEncoder->encodePassword(
             $user,
             'engage'

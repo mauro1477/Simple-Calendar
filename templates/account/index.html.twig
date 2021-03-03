@@ -4,7 +4,7 @@
     {{ encore_entry_link_tags('account') }}
 {#    {% if app.environment != 'test' %}{{ encore_entry_link_tags('account') }}{% endif %}#}
 {% endblock %}
-{% block title %}Manage Account!{% endblock %}
+{% block title %}User Account{% endblock %}
 {% block body %}
     <div class="container">
         <div class="row user-menu-container square">
@@ -12,7 +12,6 @@
                 <div class="row spacepurplebg white">
                     <div class="col-md-10 no-pad">
                         <div class="user-pad">
-                            <h3>User Account: {{ app.user.firstName }}</h3>
                             <h3>Email: {{ app.user.email }}</h3>
                             <h3>Password:{{ app.user.password }}</h3>
                             <h3>Cancel your subscription below.</h3>
