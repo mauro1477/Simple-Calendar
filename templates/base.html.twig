@@ -19,13 +19,13 @@
                     {% if not is_granted('ROLE_ADMIN')%}
                     {% if is_granted('ROLE_USER')%}
                     <li class="nav-item">
-                        <a style="color: #fff;" class="nav-link" href="{{ path('app_account') }}">Accounts</a>
+                        <a style="color: #fff;" class="nav-link" href="{{ path('app_account') }}">User Account</a>
                     </li>
                     {% endif %}
                     {% endif %}
                     {% if is_granted('ROLE_ADMIN') %}
                     <li class="nav-item">
-                        <a style="color: #fff;" class="nav-link" href="{{ path('app_admin_account') }}">Manage Accounts</a>
+                        <a style="color: #fff;" class="nav-link" href="{{ path('app_admin_account') }}">Admin Account</a>
                     </li>
                     <li class="nav-item">
                         <a style="color: #fff;" class="nav-link" href="{{ path('admin_month_list') }}">Month List</a>
