@@ -6,6 +6,7 @@
 parameters:
     uploads_base_url: 'https://%env(AWS_S3_ACCESS_BUCKET)%.s3-us-east-2.amazonaws.com'
 
+
 services:
     # default configuration for services in *this* file
     _defaults:
