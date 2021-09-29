@@ -1,0 +1,30 @@
+{% extends 'content_base.html.twig' %}
+{% block content_body %}
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px;padding-top:50px">
+        <h1>Edit '{{ month.title }}'</h1>
+            <hr>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Details</h3>
+                    {{ include('calendar_admin/month/_form_month.html.twig', {
+                        button_text: 'Update!'
+                    }) }}
+                </div>
+            </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('file_input_css') }}
+{#    {% if app.environment != 'test' %}{{ encore_entry_link_tags('file_input_css') }}{% endif %}#}
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('file_input_js') }}
+
+{#    {% if app.environment != 'test' %}{{ encore_entry_script_tags('file_input_js') }}{% endif %}#}
+{% endblock %}

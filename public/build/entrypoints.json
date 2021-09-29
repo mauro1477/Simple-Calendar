@@ -1,0 +1,66 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/0.cf60d32b.js",
+        "/build/1.6b6f25ff.js",
+        "/build/app.c3309d9d.js"
+      ],
+      "css": [
+        "/build/app.8ae0c252.css"
+      ]
+    },
+    "admin_calendar_form": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/0.cf60d32b.js",
+        "/build/1.6b6f25ff.js",
+        "/build/admin_calendar_form.fb4f3da8.js"
+      ],
+      "css": [
+        "/build/admin_calendar_form.ce8cb9a9.css"
+      ]
+    },
+    "show_form": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/0.cf60d32b.js",
+        "/build/1.6b6f25ff.js",
+        "/build/show_form.92c7cde0.js"
+      ]
+    },
+    "file_input_js": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/0.cf60d32b.js",
+        "/build/file_input_js.c4706112.js"
+      ]
+    },
+    "file_input_css": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/file_input_css.7d0d1ff9.js"
+      ],
+      "css": [
+        "/build/file_input_css.28cf17f3.css"
+      ]
+    },
+    "account": {
+      "js": [
+        "/build/runtime.d94b3b43.js"
+      ],
+      "css": [
+        "/build/account.71d5870a.css"
+      ]
+    },
+    "login": {
+      "js": [
+        "/build/runtime.d94b3b43.js"
+      ],
+      "css": [
+        "/build/login.27a08190.css"
+      ]
+    }
+  }
+}

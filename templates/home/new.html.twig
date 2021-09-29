@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} SimpleCalendar {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for month in months %}
+            <div class="row">
+                <!-- Article List -->
+                <div class="col-sm-12">
+                    <!-- H1 Article -->
+                    {% if month.publishedAt == true %}
+                    <a class="main-article-link">
+                        <div class="main-article mb-5 pb-3">
+                            <img src="{{ uploaded_asset(month.imagePath) }}" alt="meteor shower">
+                            <h1 class="text-center mt-2">{{ month.title }}</h1>
+                        </div>
+                    </a>
+                    <!-- Supporting Day -->
+                    <div class="row">
+                        {% for day in month.days %}
+                            <div class="col-sm-4">
+                                <div class="article-container my-1">
+                                    {% if day.publishedAt == true %}
+                                        <a href="{{ path('day_show', {slug: day.slug}) }}">
+                                            {#                            <img class="article-img" src="{{ asset('images/asteroid.jpeg') }}">#}
+                                            <div class="col-md-3 article-title d-inline-block pl-3 align-middle">
+                                                <span>{{ day.title }}</span>
+                                                {#                                <span class="pl-5 article-details float-right"> {{ day.publishedAt ? day.publishedAt }}</span>#}
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                    {% if loop.index is divisible by(4) %}
+                                        </div><div class="row">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block content_class %}{{ parent() }} show-article-container-border-green{% endblock %}
+
+{% block content_body %}
+
+{% endblock %}

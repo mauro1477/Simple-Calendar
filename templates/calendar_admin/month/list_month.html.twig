@@ -1,0 +1,76 @@
+{% extends 'content_base.html.twig' %}
+{% block content_body %}
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px;padding-top:50px;padding-bottom: 20px">
+        <a href="{{ path('admin_month_new') }}" class="btn btn-primary pull-right">
+            Create Month <span class="fa fa-calendar-plus-o" style="vertical-align: 1px"></span>
+        </a>
+        <h1>All Months</h1>
+    </div>
+    <div class="container" style="background:#F0F0F0;padding-right:50px;padding-left:50px">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>&nbsp;</th>
+                <th>Details</th>
+                <th>Days</th>
+                <th>Show Month</th>
+                <th>Published</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>DELETE MONTH</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for month in months %}
+                    <tr>
+                        <td>{{ month.title }}</td>
+                        <td>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_edit_month', {
+                                id: month.id
+                            }) }}">
+                                <span class="fa fa-pencil"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_day_list', {
+                                id: month.id
+                            }) }}">
+                                <span class="fa fa-th-list"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_show_month', {
+                                id: month.id
+                            }) }}">
+                                <span class="fa fa-calendar"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-{{ month.isPublished ? 'check' : 'times' }}"></span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_delete_month', {
+                                id: month.id
+                            }) }}">
+                                <span class="fa fa-trash"></span>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
