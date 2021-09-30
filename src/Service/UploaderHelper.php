@@ -8,6 +8,7 @@ use League\Flysystem\FilesystemInterface;
 use Symfony\Component\HttpFoundation\File\File;
 use Psr\Log\LoggerInterface;
 use League\Flysystem\FileNotFoundException;
+use League\Flysystem\AdapterInterface;
 
 
 class UploaderHelper
@@ -98,12 +99,15 @@ class UploaderHelper
         }
         $newFilename = Urlizer::urlize(pathinfo($originalFilename, PATHINFO_FILENAME)).'-'.uniqid().'.'.$file->guessExtension();
 
-        $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
+        // $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
 
         $stream = fopen($file->getPathname(), 'r');
-        $result = $filesystem->writeStream(
+        $result = $this->filesystem->writeStream(
             $directory.'/'.$newFilename,
-            $stream
+            $stream,
+            [
+                'visibility' => $isPublic ? AdapterInterface::VISIBILITY_PUBLIC : AdapterInterface::VISIBILITY_PRIVATE
+            ]
         );
         if ($result === false) {
             throw new \Exception(sprintf('Could not write uploaded file "%s"', $newFilename));
