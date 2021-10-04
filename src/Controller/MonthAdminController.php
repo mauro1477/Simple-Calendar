@@ -64,7 +64,6 @@ class MonthAdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
              /** @var UploadedFile $uploadedFile */
              $uploadedFile = $form['imageFile']->getData();
-             // dd($uploadedFile);
              if($uploadedFile){
                $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $month->getImageFilename());
                $month->setImageFilename($newFilename);
