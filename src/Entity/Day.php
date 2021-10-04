@@ -35,10 +35,10 @@ class Day
     private $PublishedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity=CategoryReference::class, mappedBy="day")
+     * @ORM\OneToMany(targetEntity=Day_PDF_File::class, mappedBy="day")
      * @ORM\OrderBy({"position"="ASC"})
      */
-    private $categoryReferences;
+    private $day_pdf_files;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -64,7 +64,7 @@ class Day
 
     public function __construct()
     {
-        $this->categoryReferences = new ArrayCollection();
+        $this->day_pdf_files = new ArrayCollection();
     }
 
     public function getId()
@@ -91,19 +91,19 @@ class Day
 
 
     /**
-     * @return Collection|CategoryReference[]
+     * @return Collection|Day_PDF_File[]
      */
-    public function getCategoryReferences(): Collection
+    public function getDay_PDF_Files(): Collection
     {
-        return $this->categoryReferences;
+        return $this->day_pdf_files;
     }
 
-    public function removeCategoryReference(CategoryReference $categoryReference): self
+    public function removeDay_PDF_Files(Day_PDF_File $day_pdf_file): self
     {
-        if ($this->categoryReferences->removeElement($categoryReference)) {
+        if ($this->day_pdf_files->removeElement($day_pdf_file)) {
             // set the owning side to null (unless already changed)
-            if ($categoryReference->getDay() === $this) {
-                $categoryReference->setDay(null);
+            if ($day_pdf_file->getDay() === $this) {
+                $day_pdf_file->setDay(null);
             }
         }
 

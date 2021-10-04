@@ -82,7 +82,7 @@ class ReferenceList
         const id = $li.data('id');
         $li.addClass('disabled');
         $.ajax({
-            url: '/admin/calendar/references/'+id,
+            url: '/admin/calendar/days_pdf/'+id,
             method: 'DELETE'
         }).then(() => {
             this.references = this.references.filter(reference => {
@@ -100,7 +100,7 @@ class ReferenceList
         });
         reference.originalFilename = $(event.currentTarget).val();
         $.ajax({
-            url: '/admin/calendar/references/'+id,
+            url: '/admin/calendar/days_pdf/'+id,
             method: 'PUT',
             data: JSON.stringify(reference)
         });
@@ -113,7 +113,7 @@ class ReferenceList
     <span class="drag-handle fa fa-reorder"></span>
     <input type="text" value="${reference.originalFilename}" class="form-control js-edit-filename" style="width: auto;">
     <span>
-        <a href="/admin/calendar/references/${reference.id}/download" target="_blank" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: middle"></span></a>
+        <a href="/admin/calendar/days_pdf/${reference.id}/download" target="_blank" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: middle"></span></a>
         <button class="js-reference-delete btn btn-link btn-sm"><span class="fa fa-trash"></span></button>
     </span>
 </li>

@@ -76,7 +76,7 @@ class ReferenceShow
         const id = $li.data('id');
         $li.addClass('disabled');
         $.ajax({
-            url: '/admin/calendar/references/'+id,
+            url: '/admin/calendar/days_pdf/'+id,
             method: 'DELETE'
         }).then(() => {
             this.references = this.references.filter(reference => {
@@ -94,7 +94,7 @@ class ReferenceShow
         });
         reference.originalFilename = $(event.currentTarget).val();
         $.ajax({
-            url: '/admin/calendar/references'+id,
+            url: '/admin/calendar/days_pdf'+id,
             method: 'PUT',
             data: JSON.stringify(reference)
         });
@@ -106,7 +106,7 @@ class ReferenceShow
 <li class="list-group-item d-flex justify-content-between align-items-center" data-id="${reference.id}">
     <label style="font-size: 14px;"> ${reference.originalFilename}</label>
     <span>
-        <a href="/admin/calendar/references/${reference.id}/download" target="_blank" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: top;"></span></a>
+        <a href="/admin/calendar/days_pdf/${reference.id}/download" target="_blank" class="btn btn-link btn-sm"><span class="fa fa-download" style="vertical-align: top;"></span></a>
     </span>
 </li>
 `

@@ -13,9 +13,9 @@
                 <div class="col-sm-4">
                     <h3>Files</h3>
                     <ul class="list-group small">
-                        <ul class="list-group small js-reference-list" data-url="{{ path('admin_day_list_references', {id: day.id}) }}"></ul>
+                        <ul class="list-group small js-reference-list" data-url="{{ path('admin_day_list_days_pdf', {id: day.id}) }}"></ul>
                     </ul>
-                    <form action="{{ path('admin_category_add_files', {
+                    <form action="{{ path('admin_day_add_files', {
                         id: day.id
                     }) }}"  method="POST" enctype="multipart/form-data" class="dropzone js-reference-dropzone" >
                     </form>

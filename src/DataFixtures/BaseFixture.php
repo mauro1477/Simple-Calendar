@@ -14,7 +14,7 @@ abstract class BaseFixture extends Fixture
     /** @var Generator */
     protected $faker;
 
-    private $referencesIndex = [];
+    private $day_pdf_filesIndex = [];
 
     abstract protected function loadData(ObjectManager $manager);
 
@@ -63,32 +63,32 @@ abstract class BaseFixture extends Fixture
 
     protected function getRandomReference(string $groupName)
     {
-        if (!isset($this->referencesIndex[$groupName])) {
-            $this->referencesIndex[$groupName] = [];
+        if (!isset($this->day_pdf_filesIndex[$groupName])) {
+            $this->day_pdf_filesIndex[$groupName] = [];
 
-            foreach ($this->referenceRepository->getReferences() as $key => $ref) {
+            foreach ($this->referenceRepository->getDay_PDF_Files() as $key => $ref) {
                 if (strpos($key, $groupName . '_') === 0) {
-                    $this->referencesIndex[$groupName][] = $key;
+                    $this->day_pdf_filesIndex[$groupName][] = $key;
                 }
             }
         }
 
-        if (empty($this->referencesIndex[$groupName])) {
-            throw new \InvalidArgumentException(sprintf('Did not find any references saved with the group name "%s"', $groupName));
+        if (empty($this->day_pdf_filesIndex[$groupName])) {
+            throw new \InvalidArgumentException(sprintf('Did not find any Day PDF Files saved with the group name "%s"', $groupName));
         }
 
-        $randomReferenceKey = $this->faker->randomElement($this->referencesIndex[$groupName]);
+        $randomReferenceKey = $this->faker->randomElement($this->day_pdf_filesIndex[$groupName]);
 
         return $this->getReference($randomReferenceKey);
     }
 
-    protected function getRandomReferences(string $groupName, int $count)
+    protected function getRandomDay_PDF_Files(string $groupName, int $count)
     {
-        $references = [];
-        while (count($references) < $count) {
-            $references[] = $this->getRandomReference($groupName);
+        $day_pdf_files = [];
+        while (count($day_pdf_files) < $count) {
+            $day_pdf_files[] = $this->getRandomReference($groupName);
         }
 
-        return $references;
+        return $day_pdf_files;
     }
 }

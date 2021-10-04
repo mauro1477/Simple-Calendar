@@ -15,7 +15,7 @@ class UploaderHelper
 {
     const CALENDAR_IMAGE = 'calendar_image';
 
-    const CATEGORY_REFERENCE = 'category_reference';
+    const DAY_PDF_FILE = 'day_pdf_file';
 
     private $filesystem;
 
@@ -39,7 +39,7 @@ class UploaderHelper
     public function uploadCalendarImage(File $file, ?string $existingFilename): string
     {
 
-        $newFilename = $this->uploadFile($file, self::CALENDAR_IMAGE, true);
+        $newFilename = $this->upload_Month_Image_File($file, self::CALENDAR_IMAGE, true);
 
         if ($existingFilename) {
             try {
@@ -58,9 +58,9 @@ class UploaderHelper
     }
 
 
-    public function uploadCategoryFile(File $file): string
+    public function uploadDayFile(File $file): string
     {
-        return $this->uploadFile($file, self::CATEGORY_REFERENCE, false);
+        return $this->uploadFile($file, self::DAY_PDF_FILE, false);
     }
 
     public function getPublicPath(string $path): string
@@ -90,8 +90,9 @@ class UploaderHelper
         return $resource;
     }
 
-    private function uploadFile(File $file, string $directory, bool $isPublic): string
+    private function upload_Month_Image_File(File $file, string $directory, bool $isPublic): string
     {
+
         if ($file instanceof UploadedFile) {
             $originalFilename = $file->getClientOriginalName();
         } else {
@@ -99,8 +100,7 @@ class UploaderHelper
         }
         $newFilename = Urlizer::urlize(pathinfo($originalFilename, PATHINFO_FILENAME)).'-'.uniqid().'.'.$file->guessExtension();
 
-        // $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
-
+        $filesystem = $this->filesystem;
         $stream = fopen($file->getPathname(), 'r');
         $result = $this->filesystem->writeStream(
             $directory.'/'.$newFilename,

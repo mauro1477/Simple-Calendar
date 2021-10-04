@@ -61,7 +61,7 @@ class DayAdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin/calendar/references/{id}/edit", name="admin_edit_day")
+     * @Route("/admin/calendar/days_pdf/{id}/edit", name="admin_edit_day")
      */
     public function edit_day(Request $request, EntityManagerInterface $em, Day $day, UploaderHelper $uploaderHelper)
     {
@@ -115,12 +115,12 @@ class DayAdminController extends AbstractController
      {
         $this->denyAccessUnlessGranted('ROLE_ADMIN', $day);
 
-         $references = $day->getCategoryReferences();
+         $pdf_files = $day->getDay_PDF_Files();
 
-         foreach($references as $reference)
+         foreach($pdf_files as $pdf_file)
          {
-             $day->removeCategoryReference($reference);
-             $entityManager->remove($reference);
+             $day->removeDay_PDF_File($pdf_file);
+             $entityManager->remove($pdf_file);
          }
 
         $month = $day->getMonth();

@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 use Symfony\Component\Serializer\Annotation\Groups;
-use App\Repository\CategoryReferenceRepository;
+use App\Repository\Day_PDF_FileRepository;
 use App\Service\UploaderHelper;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=CategoryReferenceRepository::class)
+ * @ORM\Entity(repositoryClass=Day_PDF_FileRepository::class)
  */
-class CategoryReference
+class Day_PDF_File
 {
     /**
      * @ORM\Id
@@ -21,7 +21,7 @@ class CategoryReference
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Day::class, inversedBy="categoryReferences")
+     * @ORM\ManyToOne(targetEntity=Day::class, inversedBy="Day_PDF_Files")
      * @ORM\JoinColumn(nullable=false)
      */
     private $day;
@@ -111,7 +111,7 @@ class CategoryReference
 
     public function getFilePath(): string
     {
-        return UploaderHelper::CATEGORY_REFERENCE.'/'.$this->getFilename();
+        return UploaderHelper::DAY_PDF_FILE.'/'.$this->getFilename();
     }
 
     public function getPosition(): ?int

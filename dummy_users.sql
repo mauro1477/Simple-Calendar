@@ -44,13 +44,13 @@ INSERT INTO `api_token` VALUES (261,131,'e512df76e099bd8fd663fe72fd5b5642c44b3d0
 UNLOCK TABLES;
 
 --
--- Table structure for table `category_reference`
+-- Table structure for table `day_pdf_file`
 --
 
-DROP TABLE IF EXISTS `category_reference`;
+DROP TABLE IF EXISTS `day_pdf_file`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `category_reference` (
+CREATE TABLE `day_pdf_file` (
   `id` int NOT NULL AUTO_INCREMENT,
   `day_id` int NOT NULL,
   `filename` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -64,12 +64,12 @@ CREATE TABLE `category_reference` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `category_reference`
+-- Dumping data for table `day_pdf_file`
 --
 
-LOCK TABLES `category_reference` WRITE;
-/*!40000 ALTER TABLE `category_reference` DISABLE KEYS */;
-/*!40000 ALTER TABLE `category_reference` ENABLE KEYS */;
+LOCK TABLES `day_pdf_file` WRITE;
+/*!40000 ALTER TABLE `day_pdf_file` DISABLE KEYS */;
+/*!40000 ALTER TABLE `day_pdf_file` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
