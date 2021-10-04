@@ -162,7 +162,8 @@ class Month
 
     public function getImagePath()
     {
-        return UploaderHelper::CALENDAR_IMAGE.'/'.$this->getImageFilename();
+
+        return $this->getImageFilename();
 //        return 'uploads/calendar_image/'.$this->getImageFilename();
     }
 
