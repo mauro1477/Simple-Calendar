@@ -163,7 +163,7 @@ class Month
     public function getImagePath()
     {
 
-        return UploaderHelper::CALENDAR_IMAGE."/".$this->getImageFilename();
+        return "https://".$_ENV['AWS_S3_ACCESS_BUCKET'].".s3.us-west-2.amazonaws.com/".UploaderHelper::CALENDAR_IMAGE."/".$this->getImageFilename();
 //        return 'uploads/calendar_image/'.$this->getImageFilename();
     }
 
