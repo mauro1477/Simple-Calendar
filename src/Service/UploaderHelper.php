@@ -23,16 +23,16 @@ class UploaderHelper
 
     private $publicAssetBaseUrl;
 
-    private $privateFilesystem;
+    // private $privateFilesystem;
+// FilesystemInterface $privateUploadsFilesystem,
 
-
-    public function __construct(FilesystemInterface $publicUploadsFilesystem, FilesystemInterface $privateUploadsFilesystem,  RequestStackContext $requestStackContext, LoggerInterface $logger, string $uploadedAssetsBaseUrl)
+    public function __construct(FilesystemInterface $publicUploadsFilesystem, RequestStackContext $requestStackContext, LoggerInterface $logger, string $uploadedAssetsBaseUrl)
     {
         $this->filesystem = $publicUploadsFilesystem;
         $this->requestStackContext = $requestStackContext;
         $this->logger = $logger;
         $this->publicAssetBaseUrl = $uploadedAssetsBaseUrl;
-        $this->privateFilesystem = $privateUploadsFilesystem;
+        // $this->privateFilesystem = $privateUploadsFilesystem;
     }
 
 
@@ -80,7 +80,10 @@ class UploaderHelper
      */
     public function readStream(string $path, bool $isPublic)
     {
-        $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
+        // $filesystem = $isPublic ?$this->filesystem : $this->privateFilesystem;
+
+        $filesystem = $this->filesystem;
+
 
         $resource = $filesystem->readStream($path);
 
@@ -106,7 +109,9 @@ class UploaderHelper
             $directory.'/'.$newFilename,
             $stream,
             [
-                'visibility' => $isPublic ? AdapterInterface::VISIBILITY_PUBLIC : AdapterInterface::VISIBILITY_PRIVATE
+                'visibility' => AdapterInterface::VISIBILITY_PUBLIC
+                // 'visibility' => $isPublic ? AdapterInterface::VISIBILITY_PUBLIC : AdapterInterface::VISIBILITY_PRIVATE
+
             ]
         );
         if ($result === false) {
@@ -122,6 +127,7 @@ class UploaderHelper
     public function deleteFile(string $path, bool $isPublic)
     {
         $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
+        $filesystem = $this->filesystem;
 
         $result = $filesystem->delete($path);
 
