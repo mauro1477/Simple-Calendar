@@ -2,7 +2,7 @@
 
 namespace App\Service;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\Asset\Context\RequestStackContext;
+// use Symfony\Component\Asset\Context\RequestStackContext;
 use Gedmo\Sluggable\Util\Urlizer;
 use League\Flysystem\FilesystemInterface;
 use Symfony\Component\HttpFoundation\File\File;
@@ -25,11 +25,11 @@ class UploaderHelper
 
     // private $privateFilesystem;
 // FilesystemInterface $privateUploadsFilesystem,
-
-    public function __construct(FilesystemInterface $publicUploadsFilesystem, RequestStackContext $requestStackContext, LoggerInterface $logger, string $uploadedAssetsBaseUrl)
+// RequestStackContext $requestStackContext,
+    public function __construct(FilesystemInterface $publicUploadsFilesystem,  LoggerInterface $logger, string $uploadedAssetsBaseUrl)
     {
         $this->filesystem = $publicUploadsFilesystem;
-        $this->requestStackContext = $requestStackContext;
+        // $this->requestStackContext = $requestStackContext;
         $this->logger = $logger;
         $this->publicAssetBaseUrl = $uploadedAssetsBaseUrl;
         // $this->privateFilesystem = $privateUploadsFilesystem;
