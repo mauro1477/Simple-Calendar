@@ -141,6 +141,9 @@
     "guzzlehttp/psr7": {
         "version": "1.7.0"
     },
+    "imagine/imagine": {
+        "version": "1.2.4"
+    },
     "knplabs/knp-components": {
         "version": "v2.4.2"
     },
@@ -164,6 +167,19 @@
     },
     "league/mime-type-detection": {
         "version": "1.5.0"
+    },
+    "liip/imagine-bundle": {
+        "version": "1.8",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.8",
+            "ref": "ffbb72e74598f04cc7f79f9fc736c77eeb98f569"
+        },
+        "files": [
+            "config/packages/liip_imagine.yaml",
+            "config/routes/liip_imagine.yaml"
+        ]
     },
     "monolog/monolog": {
         "version": "2.1.1"
