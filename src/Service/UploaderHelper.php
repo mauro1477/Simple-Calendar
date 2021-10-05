@@ -38,7 +38,7 @@ class UploaderHelper
 
     public function uploadCalendarImage(File $file, ?string $existingFilename): string
     {
-        $newFilename = $this->upload_Month_Image_File($file, self::CALENDAR_IMAGE, true);
+        $newFilename = $this->uploadFile($file, self::CALENDAR_IMAGE, true);
 
         if ($existingFilename) {
             try {
@@ -92,7 +92,7 @@ class UploaderHelper
         return $resource;
     }
 
-    private function upload_Month_Image_File(File $file, string $directory, bool $isPublic): string
+    private function uploadFile(File $file, string $directory, bool $isPublic): string
     {
         if ($file instanceof UploadedFile) {
             $originalFilename = $file->getClientOriginalName();
