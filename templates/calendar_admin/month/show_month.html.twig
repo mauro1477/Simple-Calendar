@@ -13,7 +13,7 @@
                                 <div class="main-article mb-3">
                                     <h1 class="text-center mt-2" style="color: #000000;">{{ month.title }}</h1>
                                     {% if month.imageFilename %}
-                                        <img class="article-img" syle="border-top:0px;" src="{{ uploaded_asset(month.imagePath)|imagine_filter('squared_thumbnail_small' }}">
+                                        <img class="article-img" syle="border-top:0px;" src="{{ uploaded_asset(month.imagePath) }}">
                                     {% endif %}
                                 </div>
                             </a>
@@ -37,7 +37,7 @@
                                                                 </div>
                                                             </div>
                                                             {#                                            {% if day.imageFilename %}#}
-                                                            {#                                                <img class="article-img card-img-bottom center" src="{{ uploaded_asset(day.imagePath)|imagine_filter('squared_thumbnail_small') }}">#}
+                                                            {#                                                <img class="article-img card-img-bottom center" src="{{ uploaded_asset(day.imagePath)}}">#}
                                                             {#                                            {% endif %}#}
                                                             {#                                <span class="pl-5 article-details float-right"> {{ day.publishedAt ? day.publishedAt }}</span>#}
                                                         </div>
