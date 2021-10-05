@@ -70,13 +70,13 @@ class DayAdminController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-             /** @var UploadedFile $uploadedFile */
-             $uploadedFile = $form['imageFile']->getData();
-
-             if($uploadedFile){
-               $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $day->getImageFilename());
-               $day->setImageFilename($newFilename);
-             }
+             // /** @var UploadedFile $uploadedFile */
+             // $uploadedFile = $form['day_pdf_files']->getData();
+             //
+             // if($uploadedFile){
+             //   $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $day->getImageFilename());
+             //   $day->setImageFilename($newFilename);
+             // }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             $month = $day->getMonth();
             $em->persist($day);
