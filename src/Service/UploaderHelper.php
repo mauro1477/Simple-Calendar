@@ -70,8 +70,7 @@ class UploaderHelper
             return $fullPath;
         }
         // needed if you deploy under a subdirectory
-        return $this->requestStackContext
-                ->getBasePath().$fullPath;
+        return $this->getBasePath().$fullPath;
     }
 
     /**
