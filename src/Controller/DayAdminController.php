@@ -71,7 +71,7 @@ class DayAdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
              // /** @var UploadedFile $uploadedFile */
-             // $uploadedFile = $form['day_pdf_files']->getData();
+             // $uploadedFile = $form['imageFile']->getData();
              //
              // if($uploadedFile){
              //   $newFilename = $uploaderHelper->uploadCalendarImage($uploadedFile, $day->getImageFilename());

@@ -70,7 +70,7 @@ class Day_PDF_FileAdminController extends BaseController
     }
 
     /**
-     * @Route("/admin/calendar/references/{id}/download", name="admin_day_download_day_pdf_file", methods={"GET"})
+     * @Route("/admin/calendar/days_pdf/{id}/download", name="admin_day_download_day_pdf_file", methods={"GET"})
      */
     public function downloadDay_PDF_File(Day_PDF_File $day_pdf_file, S3Client $s3Client, string $s3BucketName)
     {
